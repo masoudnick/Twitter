@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 24px;
+  font-weight: 400;
+  --color-primary: rgb(29, 155, 240);
+  --color-hover-primary: rgb(26, 140, 216);
+  --color-hover-primary-light: rgba(29, 155, 240, 0.1);
+  --color-dark: rgb(15, 20, 25);
+  --color-hover-dark: rgb(39, 44, 48);
+  --color-hover-gray: rgba(15, 20, 25, 0.1);
+  --color-gray-100: rgb(247, 249, 249);
+  --color-gray-200: rgb(239, 243, 244);
+  --color-gray-300: rgb(185, 202, 211);
+  --color-gray-600: rgb(83, 100, 113);
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  color: var(--color-dark);
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: #fff;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-dark {
+  color: var(--color-dark);
+}
+.bg-dark {
+  background-color: var(--color-dark);
+}
+.text-gray {
+  color: var(--color-gray-600);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-gray-200 {
+  background-color: var(--color-gray-200);
+}
+.text-11px {
+  font-size: 11px;
+}
+.text-13px {
+  font-size: 13px;
+}
+.text-15px {
+  font-size: 15px;
+}
+.bg-hover-primary-light {
+  &:hover {
+    background-color: var(--color-hover-primary-light);
+  }
+}
+.bg-hover-primary {
+  &:hover {
+    background-color: var(--color-hover-primary);
+  }
+}
+.bg-hover-gray {
+  &:hover {
+    background-color: var(--color-hover-gray);
+  }
+}
+
+// Start::Buttons style
+.btn-primary {
+  background-color: var(--color-primary);
+  &:hover {
+    background-color: var(--color-hover-primary);
+  }
+}
+.btn-dark {
+  background-color: var(--color-dark);
+  &:hover {
+    background-color: var(--color-hover-dark);
+  }
+}
+// End::Buttons style
+
+svg {
+  fill: currentColor;
+}
+input,
+textarea {
+  &:focus {
+    outline: none;
+  }
+}
+button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    // color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

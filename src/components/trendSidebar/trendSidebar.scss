@@ -1,0 +1,24 @@
+.trend-sidebar {
+  width: 350px;
+  .search-box {
+    background-color: var(--color-gray-200);
+  }
+  .trending-box {
+    background-color: var(--color-gray-100);
+    border-radius: 16px;
+  }
+  .trending-list {
+    .trending-item {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+        .trending-icon {
+          background-color: rgb(247, 249, 249);
+        }
+      }
+    }
+    .trending-icon {
+      width: 68px;
+      height: 68px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.home-timeline {
+  .header {
+    height: 53px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+  }
+  .tweet-content {
+    .tweet-text {
+      resize: none;
+      &::placeholder {
+        color: var(--color-gray-dark);
+      }
+    }
+    .toolbar {
+      .divider-line {
+        width: 1px;
+        height: 31px;
+        background-color: var(--color-gray-300);
+      }
+    }
+  }
+}
