@@ -1,0 +1,66 @@
+@font-face {
+  font-family: TwitterChirp;
+  font-weight: 400;
+  font-style: normal;
+  src: url("src/assets/fonts/chirp-regular-web.woff") format("woff");
+}
+@font-face {
+  font-family: TwitterChirp;
+  font-weight: 500;
+  font-style: normal;
+  src: url("assets/fonts/chirp-medium-web.woff") format("woff");
+}
+@font-face {
+  font-family: TwitterChirp;
+  font-weight: 700;
+  font-style: normal;
+  src: url("../src/assets/fonts/chirp-bold-web.woff") format("woff");
+}
+@font-face {
+  font-family: TwitterChirp;
+  font-weight: 800;
+  font-style: normal;
+  src: url("assets/fonts/chirp-heavy-web.woff") format("woff");
+}
+#root {
+  display: flex;
+  flex-direction: row;
+  max-width: 1265px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main-content {
+  max-width: 600px;
+}
+.logo {
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

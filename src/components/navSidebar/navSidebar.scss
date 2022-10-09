@@ -1,0 +1,29 @@
+.nav-sidebar {
+  width: 275px;
+  .logo {
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+  }
+  .nav-item {
+    transition: 0.2s background-color;
+    &:hover {
+      background-color: var(--color-hover-gray);
+    }
+  }
+  .btn-tweet {
+    box-shadow: rgb(0 0 0 / 8%) 0px 8px 28px;
+    font-size: 17px;
+    height: 52px;
+    width: 90%;
+    &:hover {
+      background-color: var(--color-hover-primary);
+    }
+  }
+}
+.unread-item {
+  width: 7px;
+  height: 7px;
+  top: -4px;
+  right: -4px;
+}
