@@ -7,6 +7,10 @@
   line-height: 24px;
   font-weight: 400;
   --color-primary: rgb(29, 155, 240);
+  --color-success: rgb(0, 186, 124);
+  --color-success-light: rgba(0, 186, 124, 0.1);
+  --color-danger: rgb(249, 24, 128);
+  --color-danger-light: rgba(249, 24, 128, 0.1);
   --color-hover-primary: rgb(26, 140, 216);
   --color-hover-primary-light: rgba(29, 155, 240, 0.1);
   --color-dark: rgb(15, 20, 25);
@@ -44,6 +48,7 @@ body {
 .bg-dark {
   background-color: var(--color-dark);
 }
+
 .text-gray {
   color: var(--color-gray-600);
 }
@@ -90,6 +95,45 @@ body {
   &:hover {
     background-color: var(--color-hover-dark);
   }
+}
+.btn-hover-primary:hover {
+  color: var(--color-primary);
+  .hover-effect {
+    background-color: var(--color-hover-primary-light);
+  }
+}
+.btn-hover-sucsess:hover {
+  color: var(--color-success);
+  .hover-effect {
+    background-color: var(--color-success-light);
+  }
+}
+.btn-hover-danger:hover {
+  color: var(--color-danger);
+  .hover-effect {
+    background-color: var(--color-danger-light);
+  }
+}
+.hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -8px;
+  border-radius: 50%;
+  transition-duration: 200ms;
+}
+.hover-profile {
+  &:hover {
+    box-shadow: rgb(0 0 0 / 3%) 0px 0px 2px inset;
+    background-color: rgba(26, 26, 26, 0.15);
+  }
+}
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 // End::Buttons style
 

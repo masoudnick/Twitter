@@ -6,18 +6,21 @@ import React from "react";
 const TrendSidebar = () => {
   return (
     <aside className="trend-sidebar flex-[0_0_auto] mr-2.5">
-      <div className="search-box rounded-full mb-3 mt-1">
-        <form className="flex flex-row items-center" action="">
-          <div className="text-gray pl-4">
-            <svg viewBox="0 0 24 24" width="18">
+      <div className="search-box  mb-3 py-1">
+        <form
+          className="search-form flex flex-row items-center rounded-full"
+          action=""
+        >
+          <div className="text-gray pl-5">
+            <svg viewBox="0 0 24 24" width="19">
               <g>
-                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                <path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"></path>
               </g>
             </svg>
           </div>
           <div className="grow">
             <input
-              className="p-3 bg-transparent w-full text-dark"
+              className="p-3 bg-transparent w-full text-dark border border-transparent"
               type="text"
               autoComplete="off"
               autoCorrect="off"
@@ -51,8 +54,7 @@ const TrendSidebar = () => {
             <div className="trending-icon flex shrink-0 justify-center items-center border rounded-xl text-gray duration-200">
               <svg viewBox="0 0 24 24" width="30" height="30">
                 <g>
-                  <path d="M14 11.25H6c-.414 0-.75.336-.75.75s.336.75.75.75h8c.414 0 .75-.336.75-.75s-.336-.75-.75-.75zm0-4H6c-.414 0-.75.336-.75.75s.336.75.75.75h8c.414 0 .75-.336.75-.75s-.336-.75-.75-.75zm-3.25 8H6c-.414 0-.75.336-.75.75s.336.75.75.75h4.75c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"></path>
-                  <path d="M21.5 11.25h-3.25v-7C18.25 3.01 17.24 2 16 2H4C2.76 2 1.75 3.01 1.75 4.25v15.5C1.75 20.99 2.76 22 4 22h15.5c1.517 0 2.75-1.233 2.75-2.75V12c0-.414-.336-.75-.75-.75zm-18.25 8.5V4.25c0-.413.337-.75.75-.75h12c.413 0 .75.337.75.75v15c0 .452.12.873.315 1.25H4c-.413 0-.75-.337-.75-.75zm16.25.75c-.69 0-1.25-.56-1.25-1.25v-6.5h2.5v6.5c0 .69-.56 1.25-1.25 1.25z"></path>
+                  <path d="M1.998 5.5c0-1.38 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.12 2.5 2.5v13c0 1.38-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.12-2.5-2.5v-13zm2.5-.5c-.276 0-.5.22-.5.5v13c0 .28.224.5.5.5h15c.276 0 .5-.22.5-.5v-13c0-.28-.224-.5-.5-.5h-15zM6 7h6v6H6V7zm2 2v2h2V9H8zm10 0h-4V7h4v2zm0 4h-4v-2h4v2zm-.002 4h-12v-2h12v2z"></path>
                 </g>
               </svg>
             </div>
@@ -84,18 +86,27 @@ const TrendSidebar = () => {
               </div>
               <div className="my-0.5 text-sm fonr-bold">
                 <p className="font-bold">
-                  Protests continue in Iran after death of Mahsa Amini in police
-                  custody
+                  Voters look ahead to the upcoming 2022 midterm elections
                 </p>
               </div>
             </div>
             <div className="trending-icon flex shrink-0 justify-center items-center border rounded-xl text-gray duration-200">
               <svg viewBox="0 0 24 24" width="30" height="30">
                 <g>
-                  <path d="M14 11.25H6c-.414 0-.75.336-.75.75s.336.75.75.75h8c.414 0 .75-.336.75-.75s-.336-.75-.75-.75zm0-4H6c-.414 0-.75.336-.75.75s.336.75.75.75h8c.414 0 .75-.336.75-.75s-.336-.75-.75-.75zm-3.25 8H6c-.414 0-.75.336-.75.75s.336.75.75.75h4.75c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"></path>
-                  <path d="M21.5 11.25h-3.25v-7C18.25 3.01 17.24 2 16 2H4C2.76 2 1.75 3.01 1.75 4.25v15.5C1.75 20.99 2.76 22 4 22h15.5c1.517 0 2.75-1.233 2.75-2.75V12c0-.414-.336-.75-.75-.75zm-18.25 8.5V4.25c0-.413.337-.75.75-.75h12c.413 0 .75.337.75.75v15c0 .452.12.873.315 1.25H4c-.413 0-.75-.337-.75-.75zm16.25.75c-.69 0-1.25-.56-1.25-1.25v-6.5h2.5v6.5c0 .69-.56 1.25-1.25 1.25z"></path>
+                  <path d="M1.998 5.5c0-1.38 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.12 2.5 2.5v13c0 1.38-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.12-2.5-2.5v-13zm2.5-.5c-.276 0-.5.22-.5.5v13c0 .28.224.5.5.5h15c.276 0 .5-.22.5-.5v-13c0-.28-.224-.5-.5-.5h-15zM6 7h6v6H6V7zm2 2v2h2V9H8zm10 0h-4V7h4v2zm0 4h-4v-2h4v2zm-.002 4h-12v-2h12v2z"></path>
                 </g>
               </svg>
+            </div>
+          </li>
+          <li className="trending-item duration-200 px-4 py-3">
+            <div className="mr-3 text-gray text-13px">
+              <span>Trending</span>
+            </div>
+            <div className="mt-0.5 font-bold text-15px">
+              <p>Islamic Republic of Iran</p>
+            </div>
+            <div className="mt-1 text-gray text-13px">
+              <span>8,147 Tweets</span>
             </div>
           </li>
           <li className="trending-item duration-200 px-4 py-3">
@@ -110,8 +121,9 @@ const TrendSidebar = () => {
         <ul className="trending-list">
           <li className="trending-item flex flex-row justify-between duration-200 px-4 py-3">
             <div className="mr-3 w-12 h-12 rounded-full overflow-hidden">
-              <Link to="">
+              <Link className="relative" to="">
                 <img src="images/users/nickparvar.jpg" alt="" />
+                <div className="hover-profile absolute duration-200 w-full h-full inset-0"></div>
               </Link>
             </div>
             <div className="flex justify-between items-center grow">
@@ -133,8 +145,9 @@ const TrendSidebar = () => {
           </li>
           <li className="trending-item flex flex-row justify-between duration-200 px-4 py-3">
             <div className="mr-3 w-12 h-12 rounded-full overflow-hidden shrink">
-              <Link to="">
+              <Link className="relative" to="">
                 <img src="images/users/nickparvar.jpg" alt="" />
+                <div className="hover-profile absolute duration-200 w-full h-full inset-0"></div>
               </Link>
             </div>
             <div className="flex justify-between items-center grow">
