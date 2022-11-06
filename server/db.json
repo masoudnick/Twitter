@@ -1,0 +1,28 @@
+{
+  "tweets": [
+    {
+      "id": 1538525847157604357,
+      "created_at": "Sun Jun 19 14:15:21 +0000 2022",
+      "full_text": "Ali Qapu Palace is an incredible UNESCO site in Isfahan which served as the official residence of the Safavid emperors. Opened in 1597, this palace is 6-stories tall and each floor is connected by a spiral staircase.\n#Iran \n#IranInReality",
+      "retweet_count": 37,
+      "favorite_count": 76,
+      "reply_count": 1,
+      "quote_count": 1,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en",
+      "hashtags": [
+        { "text": "Iran", "indices": [217, 222] },
+        { "text": "IranInReality", "indices": [224, 238] }
+      ],
+      "media": {
+        "media_url": {
+          "tiny": "images/media/FVnxEFAWYAMWmrC.webp",
+          "small": "images/media/FVnxEFAWYAMWmrC.jpg"
+        },
+        "expanded_url": "",
+        "alt_text": "Ali Qapu Palace"
+      }
+    }
+  ]
+}
