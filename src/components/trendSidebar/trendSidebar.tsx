@@ -1,12 +1,12 @@
 import "./trendSidebar.scss";
 import { Link } from "react-router-dom";
 
-import React from "react";
+import Recomendations from "./recomendations";
 
 const TrendSidebar = () => {
   return (
     <aside className="trend-sidebar flex-[0_0_auto] mr-2.5">
-      <div className="search-box  mb-3 py-1">
+      <div className="search-box mb-3 py-1">
         <form
           className="search-form flex flex-row items-center rounded-full"
           action=""
@@ -116,72 +116,7 @@ const TrendSidebar = () => {
           </li>
         </ul>
       </section>
-      <section className="trending-box mb-4 overflow-hidden">
-        <h2 className="font-extrabold text-xl px-4 py-3">Who to follow</h2>
-        <ul className="trending-list">
-          <li className="trending-item flex flex-row justify-between duration-200 px-4 py-3">
-            <div className="mr-3 w-12 h-12 rounded-full overflow-hidden">
-              <Link className="relative" to="">
-                <img src="images/users/nickparvar.jpg" alt="" />
-                <div className="hover-profile absolute duration-200 w-full h-full inset-0"></div>
-              </Link>
-            </div>
-            <div className="flex justify-between items-center grow">
-              <div className="flex flex-col">
-                <Link className="text-dark font-bold hover:underline" to="">
-                  Masoud
-                </Link>
-                <Link className="text-gray text-15" to="">
-                  @nickparvar
-                </Link>
-              </div>
-              <button
-                className="btn-dark duration-200 px-4 rounded-full text-white font-bold w-20 h-8 ml-3"
-                type="button"
-              >
-                Follow
-              </button>
-            </div>
-          </li>
-          <li className="trending-item flex flex-row justify-between duration-200 px-4 py-3">
-            <div className="mr-3 w-12 h-12 rounded-full overflow-hidden shrink">
-              <Link className="relative" to="">
-                <img src="images/users/nickparvar.jpg" alt="" />
-                <div className="hover-profile absolute duration-200 w-full h-full inset-0"></div>
-              </Link>
-            </div>
-            <div className="flex justify-between items-center grow">
-              <div className="flex flex-col">
-                <Link className="text-dark font-bold hover:underline" to="">
-                  Masoud
-                </Link>
-                <div className="flex flex-row items-center">
-                  <Link
-                    className="text-gray text-15px overflow-hidden text-ellipsis whitespace-nowrap shrink"
-                    to=""
-                  >
-                    @nickparvar
-                  </Link>
-                  <span className="px-1 ml-1.5 text-gray text-11px font-medium bg-gray-200 rounded-sm">
-                    Follows you
-                  </span>
-                </div>
-              </div>
-              <button
-                className="btn-dark duration-200 px-4 rounded-full text-white font-bold w-20 h-8 ml-3"
-                type="button"
-              >
-                Follow
-              </button>
-            </div>
-          </li>
-          <li className="trending-item duration-200 px-4 py-2">
-            <Link className="flex py-2 text-primary" to="">
-              Show more
-            </Link>
-          </li>
-        </ul>
-      </section>
+      <Recomendations />
       <section>
         <nav className="px-4 flex flex-wrap">
           <Link
