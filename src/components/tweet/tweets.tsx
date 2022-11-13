@@ -1,29 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { getTweetsApi } from "../../API";
-import "./tweet.scss";
+import Tweet from "./interfaces";
+import ProgressBar from "../progressBar/progressBar";
+import "./tweets.scss";
 
-interface Media {
-  media_url: {
-    tiny: string;
-    small: string;
-  };
-}
-
-interface Tweet {
-  id: number;
-  created_at: string;
-  full_text: string;
-  reply_count: number;
-  retweet_count: number;
-  favorite_count: number;
-  hashtags: Array<{
-    text: string;
-  }>;
-  media: Media;
-}
-
-const Timeline = () => {
+const Tweets = () => {
   const [tweets, setTweets] = useState<Tweet[]>([]);
 
   const getTweets = () => {
@@ -40,6 +23,15 @@ const Timeline = () => {
     getTweets();
     // setTimeout(() => {}, 2000);
   }, []);
+
+  const handleLoadTweetMedia = (imgUrl: string, target: any) => {
+    const tweetMediaBox = target.closest(".tweet-media-box");
+    const tweetMediaImg = tweetMediaBox.querySelector(".tweet-media-cover");
+    tweetMediaImg.src = imgUrl;
+    tweetMediaImg.onload = () => {
+      tweetMediaBox.classList.add("loaded");
+    };
+  };
 
   return (
     <>
@@ -102,24 +94,41 @@ const Timeline = () => {
                     ))}
                 </p>
               </div>
+
               {tweet.media && (
-                <div className="tweet-media-box relative rounded-2xl overflow-hidden mt-3">
-                  <Link className="flex border border-slate-100" to="">
-                    <img
-                      className="tweet-media-cover"
-                      src={tweet.media ? tweet.media.media_url?.tiny : ""}
-                      alt=""
-                      loading="lazy"
-                    />
-                  </Link>
-                  <div className="media-overlay flex items-center justify-center absolute inset-0 w-full h-full select-none">
-                    <button className="btn-load text-white px-4 font-bold rounded-full duration-200">
-                      Load image
-                    </button>
-                    <div className="tweet-media-meta">
-                      <span className="badge">25 KB</span>
+                <div className="flex flex-row rounded-2xl overflow-hidden mt-3">
+                  {tweet.media.map((media, index) => (
+                    <div
+                      className={
+                        index === 0 && tweet.media.length > 1
+                          ? "tweet-media-box grow relative basis-0 mr-0.5"
+                          : "tweet-media-box grow relative basis-0"
+                      }
+                    >
+                      <Link className="flex border border-slate-100" to="">
+                        <img
+                          className="tweet-media-cover w-full"
+                          src={media.media_url.tiny}
+                          alt={media.alt_text}
+                          loading="lazy"
+                        />
+                      </Link>
+                      <div
+                        className="media-overlay flex items-center justify-center absolute inset-0 w-full h-full select-none"
+                        onClick={(e) => {
+                          handleLoadTweetMedia(media.media_url.small, e.target);
+                        }}
+                      >
+                        <button className="btn-load text-white px-4 font-bold rounded-full duration-200">
+                          Load image
+                        </button>
+                        <div className="tweet-media-meta">
+                          <span className="badge">25 KB</span>
+                        </div>
+                      </div>
+                      <ProgressBar />
                     </div>
-                  </div>
+                  ))}
                 </div>
               )}
               <div className="tweet-actions flex justify-between mt-3">
@@ -187,4 +196,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline;
+export default Tweets;

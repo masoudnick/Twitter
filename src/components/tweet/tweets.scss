@@ -30,9 +30,13 @@
   .media-overlay {
     backdrop-filter: blur(8px);
   }
-  .tweet-media-cover {
-    width: 100%;
-    filter: blur(4px);
+  &.loaded {
+    .media-overlay {
+      backdrop-filter: none;
+    }
+    .btn-load {
+      display: none;
+    }
   }
 }
 .tweet-actions {

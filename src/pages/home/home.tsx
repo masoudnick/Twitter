@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { TrendSidebar, Timeline } from "../../components";
+import { TrendSidebar, Tweets } from "../../components";
 import React, { useRef, useState } from "react";
 import { CircularProgressBar } from "../../components";
 import "./home.scss";
@@ -178,7 +178,7 @@ const Home = () => {
               </div>
             </section>
             <section>
-              <Timeline />
+              <Tweets />
             </section>
           </div>
         </main>

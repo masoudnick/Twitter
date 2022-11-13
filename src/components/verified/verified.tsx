@@ -3,7 +3,7 @@ import React from "react";
 const Verified = () => {
   return (
     <svg
-      className="text-primary ml-1"
+      className="text-primary ml-1 shrink-0"
       viewBox="0 0 24 24"
       width="18"
       height="18"

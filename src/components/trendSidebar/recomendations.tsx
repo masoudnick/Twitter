@@ -18,8 +18,8 @@ const Recomendations = () => {
   const getRecomended = () => {
     recomendationsAPI()
       .then((res) => {
-        // console.log(res.data);
-        setUsers(res.data);
+        console.log();
+        setUsers(res.data.sort(() => 0.5 - Math.random()).slice(0, 3));
       })
       .catch((error) => {
         setUsers([]);
@@ -47,9 +47,9 @@ const Recomendations = () => {
               </Link>
             </div>
             <div className="flex justify-between items-center grow">
-              <div className="flex flex-col">
+              <div className="flex flex-col w-[165px]">
                 <Link
-                  className="flex text-dark font-bold hover:underline whitespace-nowrap"
+                  className="flex text-dark font-bold hover:underline"
                   to={"/" + user.username}
                 >
                   <span className="text-ellipsis overflow-hidden whitespace-nowrap">
@@ -62,7 +62,7 @@ const Recomendations = () => {
                 </Link>
               </div>
               <button
-                className="btn-dark duration-200 px-4 rounded-full text-white font-bold w-20 h-8 ml-3"
+                className="btn-dark duration-200 px-4 rounded-full text-white font-bold h-8 ml-3"
                 type="button"
               >
                 Follow
