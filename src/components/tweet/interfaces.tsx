@@ -1,4 +1,5 @@
 interface Media {
+  media_key: string;
   media_url: {
     tiny: string;
     small: string;
@@ -19,4 +20,4 @@ interface Tweet {
   media: Media[];
 }
 
-export default Tweet;
+export { Tweet, Media };

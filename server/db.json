@@ -26,10 +26,12 @@
       "hashtags": [{ "text": "Iran" }, { "text": "IranInReality" }],
       "media": [
         {
+          "media_key": "1538525847157604357_1",
           "media_url": {
             "tiny": "images/media/1538525847157604357/FVnxEFAWYAMWmrC.webp",
             "small": "images/media/1538525847157604357/FVnxEFAWYAMWmrC.jpg"
           },
+          "type": "photo",
           "expanded_url": "",
           "alt_text": "Ali Qapu Palace"
         }
@@ -52,10 +54,12 @@
       ],
       "media": [
         {
+          "media_key": "1538920560712900608_1",
           "media_url": {
             "tiny": "images/media/1538920560712900608/FVtYEmkXwAMkLtN.webp",
             "small": "images/media/1538920560712900608/FVtYEmkXwAMkLtN.jpg"
           },
+          "type": "photo",
           "expanded_url": "",
           "alt_text": "Persepolis"
         }
@@ -78,6 +82,8 @@
       ],
       "media": [
         {
+          "type": "photo",
+          "media_key": "1538415013886664704_1",
           "media_url": {
             "tiny": "images/media/1538415013886664704/FVmMPWmXoAMutVS.webp",
             "small": "images/media/1538415013886664704/FVmMPWmXoAMutVS.jpg"
@@ -86,10 +92,12 @@
           "alt_text": "Nasir Ol Molk Mosque"
         },
         {
+          "media_key": "1538415013886664704_2",
           "media_url": {
             "tiny": "images/media/1538415013886664704/FVmMPWnX0AAAY6Y.webp",
             "small": "images/media/1538415013886664704/FVmMPWnX0AAAY6Y.jpg"
           },
+          "type": "photo",
           "expanded_url": "",
           "alt_text": "Nasir Ol Molk Mosque"
         }
