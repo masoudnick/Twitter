@@ -20,7 +20,7 @@ const NavSidebar = () => {
           <NavLink
             to="/home"
             end
-            className="flex items-start "
+            className="flex items-start font-default"
             children={({ isActive }) => {
               return (
                 <>

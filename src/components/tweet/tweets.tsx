@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTweetsApi } from "../../API";
-import Tweet from "./interfaces";
+import { Tweet } from "./interfaces";
+import Loading from "../loading/loading";
 import SingleTweet from "./singleTweet";
 
 const Tweets = () => {
@@ -16,15 +17,16 @@ const Tweets = () => {
   };
 
   useEffect(() => {
-    getTweets();
-
-    // setTimeout(() => {}, 2000);
+    setTimeout(() => {
+      getTweets();
+    }, 1500);
   }, []);
   return (
     <>
       {tweets.map((tweet) => (
         <SingleTweet tweet={tweet} key={tweet.id} />
       ))}
+      {!tweets.length && <Loading />}
     </>
   );
 };

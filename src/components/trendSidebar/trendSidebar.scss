@@ -14,10 +14,7 @@
       }
     }
   }
-  .trending-box {
-    background-color: var(--color-gray-100);
-    border-radius: 16px;
-  }
+
   .trending-list {
     .trending-item {
       &:hover {
@@ -32,4 +29,8 @@
       height: 68px;
     }
   }
+}
+.sidebar-box {
+  background-color: var(--color-gray-100);
+  border-radius: 16px;
 }

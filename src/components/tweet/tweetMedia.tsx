@@ -51,9 +51,11 @@ const TweetMedia = ({ media, mediaNum, mediaIndex }: MediaProps) => {
           handleLoadTweetMedia(media.media_url.small, e.target);
         }}
       >
-        <button className="btn-load text-white px-4 font-bold rounded-full duration-200">
-          Load image
-        </button>
+        {mediaLoadingStatus === "failed" && (
+          <button className="btn-load text-white px-4 font-bold rounded-full duration-200">
+            Load image
+          </button>
+        )}
         <div className="tweet-media-meta">
           {mediaLoadingStatus === "failed" && (
             <span className="badge">25 KB</span>

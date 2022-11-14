@@ -29,7 +29,7 @@ const TrendSidebar = () => {
           </div>
         </form>
       </div>
-      <section className="trending-box mb-4 overflow-hidden">
+      <section className="sidebar-box mb-4 overflow-hidden">
         <h2 className="font-extrabold text-xl px-4 py-3">What’s happening</h2>
         <ul className="trending-list">
           <li className="trending-item flex flex-row justify-between duration-200 px-4 py-3">

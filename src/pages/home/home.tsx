@@ -23,7 +23,7 @@ const Home = () => {
     <>
       <section className="flex flex-row justify-between grow">
         <main className="main-content w-full">
-          <div className="home-timeline flex flex-col w-full border-x border-slate-100">
+          <div className="home-timeline flex flex-col w-full border-x border-slate-100 min-h-full">
             <section className="header flex flex-row items-center pl-4 pr-1.5 sticky">
               <h2 className="font-bold text-xl grow">Home</h2>
               <button
