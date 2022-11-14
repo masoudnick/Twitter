@@ -136,7 +136,7 @@ const Home = () => {
                       <>
                         <div className="progress-bar relative">
                           <div className="-rotate-90">
-                            {tweetLength <= 280 && (
+                            {tweetLength <= 250 && (
                               <CircularProgressBar
                                 viewBox={20}
                                 width={20}
@@ -146,20 +146,36 @@ const Home = () => {
                                 percentage={(tweetLength * 100) / 280}
                               />
                             )}
-                            {tweetLength > 280 && (
+                            {250 < tweetLength && tweetLength < 280 && (
                               <CircularProgressBar
                                 viewBox={30}
                                 width={30}
                                 height={30}
                                 radius={14}
                                 strokeColor="#FFD400"
-                                percentage={tweetLength}
+                                percentage={(tweetLength * 100) / 280}
+                              />
+                            )}
+                            {tweetLength >= 280 && (
+                              <CircularProgressBar
+                                viewBox={30}
+                                width={30}
+                                height={30}
+                                radius={14}
+                                strokeColor="#f4212e"
+                                percentage={(tweetLength * 100) / 280}
                               />
                             )}
                           </div>
-                          {tweetLength > 280 && (
-                            <span className="flex items-center justify-center absolute top-0 right-0 left-0 bottom-0 text-xs m-auto">
-                              {300 - tweetLength}
+                          {250 < tweetLength && (
+                            <span
+                              className={
+                                280 > tweetLength
+                                  ? "flex items-center justify-center absolute top-0 right-0 left-0 bottom-0 text-xs m-auto"
+                                  : "flex items-center justify-center absolute top-0 right-0 left-0 bottom-0 text-xs m-auto text-danger"
+                              }
+                            >
+                              {280 - tweetLength}
                             </span>
                           )}
                         </div>

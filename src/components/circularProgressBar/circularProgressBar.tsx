@@ -1,7 +1,5 @@
 import "./circularProgressBar";
 
-import React from "react";
-
 interface Progress {
   viewBox: number;
   width: number;
@@ -19,8 +17,8 @@ const CircularProgressBar = ({
   strokeColor,
   percentage,
 }: Progress) => {
-  const dashArray: number = radius * Math.PI * 2;
-  const dashOffset: number = dashArray - (dashArray * percentage) / 100;
+  let dashArray: number = radius * 2 * Math.PI;
+  let dashOffset: number = dashArray * ((100 - percentage) / 100);
 
   return (
     <svg

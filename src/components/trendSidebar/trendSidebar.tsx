@@ -165,7 +165,7 @@ const TrendSidebar = () => {
           >
             <span>More</span>
 
-            <svg viewBox="0 0 24 24" width="16">
+            <svg className="inline-block px-0.5" viewBox="0 0 24 24" width="16">
               <g>
                 <circle cx="5" cy="12" r="2"></circle>
                 <circle cx="12" cy="12" r="2"></circle>
