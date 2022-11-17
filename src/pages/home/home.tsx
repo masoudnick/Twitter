@@ -62,7 +62,7 @@ const Home = () => {
                 <div className="toolbar flex justify-between pt-3 pb-2 border-t border-slate-100">
                   <div className="flex">
                     <button
-                      className="flex items-center justify-center w-9 h-9 relative rounded-full text-primary bg-hover-primary-light duration-200"
+                      className="flex items-center justify-center text-primary w-9 h-9 relative rounded-full bg-hover-primary-light duration-200"
                       type="button"
                     >
                       <label htmlFor="tweet-text">

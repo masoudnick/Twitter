@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTweetsApi } from "../../API";
+import { tweetsAPI } from "../../API";
 import { Tweet } from "./interfaces";
 import Loading from "../loading/loading";
 import SingleTweet from "./singleTweet";
@@ -7,7 +7,7 @@ import SingleTweet from "./singleTweet";
 const Tweets = () => {
   const [tweets, setTweets] = useState<Tweet[]>([]);
   const getTweets = () => {
-    getTweetsApi()
+    tweetsAPI()
       .then((res) => {
         setTweets(res.data);
       })

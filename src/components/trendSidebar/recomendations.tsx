@@ -28,8 +28,9 @@ const Recomendations = () => {
   };
 
   useEffect(() => {
-    // getRecomended();
-    // setTimeout(() => {}, 2000);
+    setTimeout(() => {
+      getRecomended();
+    }, 2000);
   }, []);
 
   return (

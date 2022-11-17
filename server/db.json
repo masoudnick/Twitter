@@ -130,5 +130,44 @@
       "username": "FCBarcelona",
       "profile_image_url": "images/users/1542768398727249920/-neNiKE9_normal.jpg"
     }
+  ],
+  "trending": [
+    {
+      "id": 1,
+      "type": "event",
+      "name": "Qatar World Cup 2022",
+      "url": "https://twitter.com/hashtag/QatarWorldCup2022",
+      "metaDescription": "Trending with",
+      "domainContext": "Soccer",
+      "timeString": "LIVE",
+      "groupedTrends": {
+        "name": "Qatar World Cup 2022",
+        "url": "https://twitter.com/QatarWC2022NFT"
+      }
+    },
+    {
+      "id": 2,
+      "type": "trend",
+      "name": "#IranInReality",
+      "url": "https://twitter.com/hashtag/IranInReality?src=hashtag_click",
+      "description": "The mainstream media is giving you false and censored images of Iran.",
+      "metaDescription": "10,147 Tweets"
+    },
+    {
+      "id": 3,
+      "type": "event",
+      "name": "Voters look ahead to the upcoming 2022 midterm elections",
+      "url": "",
+      "domainContext": "World news",
+      "timeString": "LIVE"
+    },
+    {
+      "id": 4,
+      "type": "trend",
+      "name": "Islamic Republic of Iran",
+      "url": "",
+      "metaDescription": "8,147 Tweets",
+      "domainContext": "Trending"
+    }
   ]
 }
