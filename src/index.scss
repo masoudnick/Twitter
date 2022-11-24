@@ -75,6 +75,7 @@ body {
 .text-15px {
   font-size: 15px;
 }
+
 .bg-hover-primary-light {
   &:hover {
     background-color: var(--color-hover-primary-light);
@@ -108,6 +109,12 @@ body {
   color: var(--color-primary);
   .hover-effect {
     background-color: var(--color-hover-primary-light);
+  }
+}
+.btn-hover-gray:hover {
+  color: var(--color-dark);
+  .hover-effect {
+    background-color: var(--color-hover-gray);
   }
 }
 .btn-hover-sucsess:hover {

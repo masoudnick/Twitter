@@ -4,6 +4,9 @@ import CircularProgressBar from "./circularProgressBar/circularProgressBar";
 import Tweets from "./tweet/tweets";
 import Loading from "./loading/loading";
 import Verified from "./verified/verified";
+import SearchForm from "./searchBox/searchForm";
+import Trending from "./trendSidebar/trending";
+import Recomendations from "./trendSidebar/recomendations";
 
 export {
   NavSidebar,
@@ -12,4 +15,7 @@ export {
   Tweets,
   Verified,
   Loading,
+  SearchForm,
+  Trending,
+  Recomendations,
 };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { trendingAPI } from "../../API";
 import Loading from "../loading/loading";
 
@@ -17,8 +17,13 @@ interface Trend {
     url: string;
   };
 }
+interface TrendingProps {
+  showTitle: boolean;
+  showReadMore: boolean;
+  classes: string | undefined;
+}
 
-const Trending = () => {
+const Trending = ({ showTitle, showReadMore, classes }: TrendingProps) => {
   const [trends, setTrends] = useState<Trend[]>([]);
 
   const getTrends = () => {
@@ -37,10 +42,14 @@ const Trending = () => {
   }, []);
 
   return (
-    <section className="sidebar-box mb-4 overflow-hidden">
+    <section className={"sidebar-box overflow-hidden " + classes}>
       {trends.length > 0 ? (
         <>
-          <h2 className="font-extrabold text-xl px-4 py-3">What’s happening</h2>
+          {showTitle && (
+            <h2 className="font-extrabold text-xl px-4 py-3">
+              What’s happening
+            </h2>
+          )}
           <div className="trending-list">
             {trends.map((trend) =>
               trend.type === "event" ? (
@@ -72,6 +81,11 @@ const Trending = () => {
                             <Link
                               className="text-primary pl-1 hover:underline"
                               to={trend.groupedTrends.url}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                window.open(trend.groupedTrends.url, "_blank");
+                              }}
                             >
                               {trend.groupedTrends.name}
                             </Link>
@@ -113,12 +127,13 @@ const Trending = () => {
                 </div>
               )
             )}
-
-            <div className="trending-item duration-200 px-4 py-3">
-              <Link className="flex py-2 text-primary" to="">
-                Show more
-              </Link>
-            </div>
+            {showReadMore && (
+              <div className="trending-item duration-200 px-4 py-3">
+                <Link className="flex py-2 text-primary" to="">
+                  Show more
+                </Link>
+              </div>
+            )}
           </div>
         </>
       ) : (

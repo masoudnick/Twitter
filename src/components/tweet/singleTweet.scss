@@ -4,7 +4,7 @@
     background-color: rgba(0, 0, 0, 0.03);
   }
 }
-.tweet-media-box {
+.media-box {
   .btn-load {
     backdrop-filter: blur(4px);
     background-color: rgba(15, 20, 25, 0.75);
@@ -13,7 +13,7 @@
       background-color: rgba(39, 44, 48, 0.75);
     }
   }
-  .tweet-media-meta {
+  .media-meta {
     position: absolute;
     left: 12px;
     bottom: 12px;
@@ -27,9 +27,15 @@
       color: #fff;
     }
   }
-  .media-overlay {
-    backdrop-filter: blur(8px);
+  .gradiant-overlay {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent 25%,
+      rgba(0, 0, 0, 0.7) 75%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
+
   &.loaded {
     .media-overlay {
       backdrop-filter: none;
@@ -38,7 +44,11 @@
       display: none;
     }
   }
+  .media-overlay {
+    backdrop-filter: blur(8px);
+  }
 }
+
 .tweet-actions {
   max-width: 425px;
 }

@@ -1,7 +1,7 @@
-import { Home } from "./pages";
+import { Home, Explore } from "./pages";
 import { NavSidebar } from "./components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <NavSidebar />
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
         </Routes>
       </>
     </Router>

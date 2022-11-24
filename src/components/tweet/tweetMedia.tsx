@@ -32,14 +32,14 @@ const TweetMedia = ({ media, mediaNum, mediaIndex }: MediaProps) => {
     <div
       className={
         mediaIndex === 0 && mediaNum > 1
-          ? "tweet-media-box grow basis-0 relative mr-0.5"
-          : "tweet-media-box grow basis-0 relative"
+          ? "media-box grow basis-0 relative mr-0.5"
+          : "media-box grow basis-0 relative"
       }
       key={media.media_key}
     >
       <Link className="flex border border-slate-100" to="">
         <img
-          className="tweet-media-cover w-full"
+          className="w-full"
           src={media.media_url.tiny}
           alt={media.alt_text}
           loading="lazy"
@@ -56,7 +56,7 @@ const TweetMedia = ({ media, mediaNum, mediaIndex }: MediaProps) => {
             Load image
           </button>
         )}
-        <div className="tweet-media-meta">
+        <div className="media-meta">
           {mediaLoadingStatus === "failed" && (
             <span className="badge">25 KB</span>
           )}

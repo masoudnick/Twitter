@@ -13,13 +13,16 @@ type user = {
   verified: boolean;
 };
 
-const Recomendations = () => {
+interface RecomendationsProps {
+  classes: string | undefined;
+}
+
+const Recomendations = ({ classes }: RecomendationsProps) => {
   const [users, setUsers] = useState<user[]>([]);
 
   const getRecomended = () => {
     recomendationsAPI()
       .then((res) => {
-        console.log();
         setUsers(res.data.sort(() => 0.5 - Math.random()).slice(0, 3));
       })
       .catch((error) => {
@@ -34,7 +37,7 @@ const Recomendations = () => {
   }, []);
 
   return (
-    <section className="sidebar-box mb-4 overflow-hidden">
+    <section className={"sidebar-box overflow-hidden " + classes}>
       {users.length > 0 ? (
         <>
           <h2 className="font-extrabold text-xl px-4 py-3">Who to follow</h2>

@@ -1,0 +1,13 @@
+.search-box {
+  position: sticky;
+  top: -0.5px;
+  z-index: 2;
+  .search-form {
+    background-color: var(--color-gray-200);
+  }
+  input {
+    &::placeholder {
+      color: var(--color-gray-600);
+    }
+  }
+}

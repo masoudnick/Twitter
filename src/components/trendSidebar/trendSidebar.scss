@@ -1,36 +1,21 @@
 .trend-sidebar {
   width: 350px;
-  .search-form {
-    background-color: var(--color-gray-200);
-  }
-  .search-box {
-    position: sticky;
-    top: -0.5px;
-    z-index: 2;
-    background-color: #fff;
-    input {
-      &::placeholder {
-        color: var(--color-gray-600);
-      }
-    }
-  }
-
-  .trending-list {
-    .trending-item {
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.03);
-        .trending-icon {
-          background-color: rgb(247, 249, 249);
-        }
-      }
-    }
-    .trending-icon {
-      width: 68px;
-      height: 68px;
-    }
+  .sidebar-box {
+    background-color: var(--color-gray-100);
+    border-radius: 16px;
   }
 }
-.sidebar-box {
-  background-color: var(--color-gray-100);
-  border-radius: 16px;
+.trending-list {
+  .trending-item {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+      .trending-icon {
+        background-color: rgb(247, 249, 249);
+      }
+    }
+  }
+  .trending-icon {
+    width: 68px;
+    height: 68px;
+  }
 }

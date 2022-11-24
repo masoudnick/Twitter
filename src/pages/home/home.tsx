@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { TrendSidebar, Tweets } from "../../components";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { CircularProgressBar } from "../../components";
 import "./home.scss";
 
@@ -21,10 +21,10 @@ const Home = () => {
 
   return (
     <>
-      <section className="flex flex-row justify-between grow">
+      <section className="flex justify-between grow">
         <main className="main-content w-full">
           <div className="home-timeline flex flex-col w-full border-x border-slate-100 min-h-full">
-            <section className="header flex flex-row items-center pl-4 pr-1.5 sticky">
+            <section className="header flex items-center pl-4 pr-1.5 sticky h-[53px]">
               <h2 className="font-bold text-xl grow">Home</h2>
               <button
                 className="flex items-center justify-center w-9 h-9 rounded-full bg-hover-gray duration-200"
@@ -37,7 +37,7 @@ const Home = () => {
                 </svg>
               </button>
             </section>
-            <section className="write-tweet-box flex flex-row border-b px-4 pt-2 pb-1 mb-1 border-slate-100">
+            <section className="write-tweet-box flex border-b px-4 pt-2 pb-1 mb-1 border-slate-100">
               <div className="mr-3">
                 <Link
                   className="flex w-12 h-12 rounded-full overflow-hidden relative"
@@ -65,7 +65,7 @@ const Home = () => {
                       className="flex items-center justify-center text-primary w-9 h-9 relative rounded-full bg-hover-primary-light duration-200"
                       type="button"
                     >
-                      <label htmlFor="tweet-text">
+                      <label className="" htmlFor="tweet-text">
                         <input
                           className="w-full h-full overflow-hidden absolute opacity-0 -z-1"
                           name="tweet-text"
@@ -198,7 +198,7 @@ const Home = () => {
             </section>
           </div>
         </main>
-        <TrendSidebar />
+        <TrendSidebar showTrending={true} showRecomendations={true} />
       </section>
     </>
   );
