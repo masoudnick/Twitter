@@ -169,5 +169,59 @@
       "metaDescription": "8,147 Tweets",
       "domainContext": "Trending"
     }
+  ],
+  "notifications": [
+    {
+      "id": "EU8Y4YdXgAAAAAAB_uJydqjAdWUNzTuexRE",
+      "icon": "heart",
+      "message": "Ali and Hadi liked your Tweet",
+      "tweet": "Test",
+      "fromUsers": [{ "id": "1503456224376885253", "username": "test" }],
+      "entities": [
+        {
+          "id": "1399042635952791558",
+          "username": "mm",
+          "fromIndex": 0,
+          "toIndex": 15
+        },
+        {
+          "id": "1217247080235913217",
+          "fromIndex": 20,
+          "toIndex": 27
+        }
+      ],
+      "rtl": false
+    },
+    {
+      "id": "EU8Y4YdXgAAAAAAB_uJydtmPIdJZiZT8sC0",
+      "icon": "retweet",
+      "message": "Ali Retweeted your Tweet",
+      "tweet": "Test 2",
+      "fromUsers": [{ "id": "1503456224376885253", "username": "test" }],
+      "entities": [
+        {
+          "id": "1490382596597030920",
+          "username": "1490382596597030920",
+          "fromIndex": 0,
+          "toIndex": 18
+        }
+      ],
+      "rtl": false
+    },
+    {
+      "id": "EU8Y4YdXgAAAAAAB_uJydtmPIdJWS4CKsC0",
+      "icon": "person",
+      "message": "Ali followed you",
+      "entities": [
+        {
+          "id": "1215268502258487297",
+          "username": "1490382596597030920",
+          "fromIndex": 0,
+          "toIndex": 3
+        }
+      ],
+      "fromUsers": [{ "id": "1503456224376885253", "username": "test" }],
+      "rtl": false
+    }
   ]
 }

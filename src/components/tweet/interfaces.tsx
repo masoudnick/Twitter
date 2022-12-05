@@ -20,4 +20,4 @@ interface Tweet {
   media: Media[];
 }
 
-export { Tweet, Media };
+export type { Tweet, Media };

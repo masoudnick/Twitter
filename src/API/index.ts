@@ -8,3 +8,6 @@ export const recomendationsAPI = async () =>
 
 export const trendingAPI = async () =>
   await Axios.get("http://127.0.0.1:8000/trending/");
+
+export const notificationAPI = async () =>
+  await Axios.get("http://127.0.0.1:8000/notifications");

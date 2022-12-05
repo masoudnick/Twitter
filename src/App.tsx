@@ -1,4 +1,4 @@
-import { Home, Explore } from "./pages";
+import { Home, Explore, Notifications } from "./pages";
 import { NavSidebar } from "./components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/explore" element={<Explore />} />
+          <Route path="/notifications" element={<Notifications />} />
         </Routes>
       </>
     </Router>

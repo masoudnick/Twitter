@@ -1,0 +1,10 @@
+.notification-item {
+  .users-list {
+    .user-item {
+      margin-right: 4px;
+      &:not(:first-child) {
+        margin-left: 4px;
+      }
+    }
+  }
+}
