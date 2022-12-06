@@ -89,7 +89,6 @@ const NavSidebar = () => {
           />
           <NavLink
             to="/notifications"
-            end
             className="flex items-start"
             children={({ isActive }) => {
               return (

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet, NavLink } from "react-router-dom";
 import { TrendSidebar } from "../../components";
 import NotificationsList from "./notificationsList";
 import "./notifications.scss";
@@ -9,7 +9,7 @@ const Notifications = () => {
       <section className="flex flex-row justify-between grow">
         <main className="main-content w-full">
           <div className="flex flex-col w-full border-x border-slate-100 min-h-full">
-            <section className="header flex flex-col sticky">
+            <section className="header flex flex-col sticky border-b border-slate-100">
               <div className="flex items-center pl-4 pr-4 h-[53px]">
                 <h2 className="font-bold text-xl grow">Notifications</h2>
                 <button
@@ -26,32 +26,86 @@ const Notifications = () => {
                   </div>
                 </button>
               </div>
-              <nav className="flex border-b border-slate-100">
-                <Link
-                  className="flex grow justify-center items-center px-6 bg-hover-gray duration-200 "
-                  to=""
-                >
-                  <div className="flex justify-center items-center relative py-4">
-                    <span className="font-bold">All</span>
-                    <div className="min-w-[56px] h-1 absolute bottom-0 bg-primary rounded-full"></div>
-                  </div>
-                </Link>
-                <Link
+              <nav className="flex">
+                <NavLink
+                  to="/notifications"
+                  end
                   className="flex grow justify-center items-center px-6 bg-hover-gray duration-200"
+                  children={({ isActive }) => {
+                    return (
+                      <>
+                        <div className="flex justify-center items-center relative py-4">
+                          <span
+                            className={
+                              isActive
+                                ? "font-bold font-default"
+                                : "text-gray font-medium font-default"
+                            }
+                          >
+                            All
+                          </span>
+                          {isActive && (
+                            <div className="min-w-[56px] h-1 absolute bottom-0 bg-primary rounded-full"></div>
+                          )}
+                        </div>
+                      </>
+                    );
+                  }}
+                />
+                <NavLink
                   to="/notifications/verified"
-                >
-                  <span className="text-gray font-medium">Verified</span>
-                </Link>
-                <Link
+                  end
                   className="flex grow justify-center items-center px-6 bg-hover-gray duration-200"
+                  children={({ isActive }) => {
+                    return (
+                      <>
+                        <div className="flex justify-center items-center relative py-4">
+                          <span
+                            className={
+                              isActive
+                                ? "font-bold font-default"
+                                : "text-gray font-medium font-default"
+                            }
+                          >
+                            Verified
+                          </span>
+                          {isActive && (
+                            <div className="min-w-[56px] h-1 absolute bottom-0 bg-primary rounded-full"></div>
+                          )}
+                        </div>
+                      </>
+                    );
+                  }}
+                />
+                <NavLink
                   to="/notifications/mentions"
-                >
-                  <span className="text-gray font-bold">Mentions</span>
-                </Link>
+                  end
+                  className="flex grow justify-center items-center px-6 bg-hover-gray duration-200"
+                  children={({ isActive }) => {
+                    return (
+                      <>
+                        <div className="flex justify-center items-center relative py-4">
+                          <span
+                            className={
+                              isActive
+                                ? "font-bold font-default"
+                                : "text-gray font-medium font-default"
+                            }
+                          >
+                            Mentions
+                          </span>
+                          {isActive && (
+                            <div className="min-w-[56px] h-1 absolute bottom-0 bg-primary rounded-full"></div>
+                          )}
+                        </div>
+                      </>
+                    );
+                  }}
+                />
               </nav>
             </section>
             <section>
-              <NotificationsList />
+              <Outlet />
             </section>
           </div>
         </main>
