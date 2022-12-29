@@ -7,6 +7,8 @@ import Verified from "./verified/verified";
 import SearchForm from "./searchBox/searchForm";
 import Trending from "./trendSidebar/trending";
 import Recomendations from "./trendSidebar/recomendations";
+import DirectMessage from "./directMessage";
+import Preloading from "./preloading";
 
 export {
   NavSidebar,
@@ -18,4 +20,6 @@ export {
   SearchForm,
   Trending,
   Recomendations,
+  DirectMessage,
+  Preloading,
 };

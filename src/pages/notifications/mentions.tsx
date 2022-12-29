@@ -10,7 +10,7 @@ const Mentions = () => {
           alt=""
         />
       </div>
-      <div className="p-7">
+      <div className="p-7 font-default">
         <div className="font-extrabold leading-8 text-[26px] mb-3">
           <h1>Control which conversations you’re mentioned in</h1>
         </div>

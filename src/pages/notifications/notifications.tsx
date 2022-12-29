@@ -104,7 +104,7 @@ const Notifications = () => {
                 />
               </nav>
             </section>
-            <section>
+            <section className="timeline-notifications">
               <Outlet />
             </section>
           </div>

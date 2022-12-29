@@ -4,7 +4,7 @@ const Loading = () => {
   return (
     <div className="flex items-center justify-center py-5">
       <div className="spinner" style={{ width: "26px", height: "26px" }}>
-        <svg height="100%" viewBox="0 0 32 32" width="100%">
+        <svg viewBox="0 0 32 32" width="100%" height="100%">
           <circle
             cx="16"
             cy="16"
